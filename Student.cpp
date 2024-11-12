@@ -135,7 +135,7 @@ std::istream& inputFromFile(std::istream& is, Person& person) {
     int dob[3];
 
     if (is >> firstName >> lastName >> id >> dob[0] >> dob[1] >> dob[2]) {
-        person = Person(firstName, lastName, id, dob); // Используем std::string
+        person = Person(firstName, lastName, id, dob); 
     }
     else {
         is.clear();
@@ -152,7 +152,7 @@ std::istream& inputFromFile(std::istream& is, Student& student) {
     int yearOfStudy;
 
     if (is >> firstName >> lastName >> id >> dob[0] >> dob[1] >> dob[2] >> yearOfStudy) {
-        student = Student(firstName, lastName, id, dob, yearOfStudy); // Используем std::string
+        student = Student(firstName, lastName, id, dob, yearOfStudy); 
     }
     else {
         is.clear();
