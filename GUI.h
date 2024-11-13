@@ -285,7 +285,7 @@ private slots:
         }
 
         try {
-            ShrdPtr<Sequence<Student>> loadedStudents = ReadStudentsFromFile<Student>(fileName.toStdString());
+            ShrdPtr<Sequence<Student>> loadedStudents = ReadStudentsFromFile(fileName.toStdString());
             studentSequence = loadedStudents; // Replace existing sequence
             updateStudentListWidget();
         } catch (const std::exception& e) {
