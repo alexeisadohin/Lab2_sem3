@@ -8,19 +8,18 @@
 #include <fstream>
 
 #include <sstream>
-template<typename T>
-ShrdPtr<Sequence<T>> ReadStudentsFromFile(const std::string& filename) {
+ShrdPtr<Sequence<Student>> ReadStudentsFromFile(const std::string& filename) {
     std::ifstream inputFile(filename);
     if (!inputFile.is_open()) {
         throw std::runtime_error("Could not open file: " + filename);
     }
 
-    ShrdPtr<Sequence<T>> students(new ArraySequence<T>());
+    ShrdPtr<Sequence<Student>> students(new ArraySequence<Student>());
     std::string line;
 
     while (std::getline(inputFile, line)) {
         std::istringstream iss(line);
-        T student;
+        Student student;
         char firstName[256];
         char lastName[256];
         int id, day, month, year, yearOfStudy;
