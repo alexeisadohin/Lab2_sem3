@@ -8,6 +8,7 @@ template <typename T, typename Comparator>
 class ISorter {
 public:
     virtual void Sort(ShrdPtr<Sequence<T>> sequence, Comparator comp) = 0;
+    virtual ~ISorter() = default;
 };
 
 #endif //ISORTER_H
