@@ -96,7 +96,6 @@ void testAllSortersWithAllComparators() {
             testsSort<Student, ArraySequence, StudentComparator>(*sorterPair.second, comparatorPair.second, sorterPair.first, comparatorPair.first);
             testsSort<Student, ListSequence, StudentComparator>(*sorterPair.second, comparatorPair.second, sorterPair.first, comparatorPair.first); // Test with ListSequence too
         }
-        delete sorterPair.second;
     }
 }
 
